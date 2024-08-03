@@ -1,27 +1,130 @@
-# ChatgptCloneApp
+# ChatGPT Clone Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
+This is a simple clone of the ChatGPT website built using Angular and Tailwind CSS.
 
-## Development server
+## Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Running the Application](#running-the-application)
+- [License](#license)
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Chat Interface**: A simple chat interface where users can interact with the ChatGPT model.
+- **Chat Input**: Users can type messages in the chat input and send them to the model.
+- **Chat Output**: The model's response is displayed in the chat interface.
 
-## Build
+## Prerequisites
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Make sure you have the following installed:
 
-## Running unit tests
+- Node.js and npm: [Download and Install Node.js](https://nodejs.org/)
+- MongoDB: [Download and Install MongoDB](https://www.mongodb.com/try/download/community)
+- Angular CLI: Install globally using `npm install -g @angular/cli`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Installation
 
-## Running end-to-end tests
+1. **Clone the repository**:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   ```bash
+   git clone https://github.com/manthanank/chatgpt-clone-app.git
+   cd chatgpt-clone-app
+   ```
 
-## Further help
+2. **Backend setup**:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+   Navigate to the `backend` folder and install the dependencies:
+
+   ```bash
+   cd backend
+   npm install
+   ```
+
+3. **Frontend setup**:
+
+   Navigate to the `frontend` folder and install the dependencies:
+
+   ```bash
+   cd ..
+   npm install
+   ```
+
+4. **Configure Tailwind CSS**:
+
+   Tailwind CSS should already be configured. If not, follow these steps:
+
+   - Install Tailwind CSS and its dependencies:
+
+     ```bash
+     npm install tailwindcss postcss autoprefixer
+     ```
+
+   - Initialize Tailwind CSS:
+
+     ```bash
+     npx tailwindcss init
+     ```
+
+   - Update `tailwind.config.js`:
+
+     ```javascript
+     /** @type {import('tailwindcss').Config} */
+     module.exports = {
+       content: [
+         "./src/**/*.{html,ts}"
+       ],
+       theme: {
+         extend: {},
+       },
+       plugins: [],
+     }
+     ```
+
+   - Create `postcss.config.js`:
+
+     ```javascript
+     module.exports = {
+       plugins: [
+         require('tailwindcss'),
+         require('autoprefixer'),
+       ]
+     }
+     ```
+
+   - Update `src/styles.css`:
+
+     ```css
+     @tailwind base;
+     @tailwind components;
+     @tailwind utilities;
+     ```
+
+## Running the Application
+
+1. **Start the backend server**:
+
+   Navigate to the `backend` folder and start the server:
+
+   ```bash
+   cd backend
+   npm start
+   ```
+
+   The backend server will run on `http://localhost:3000`.
+
+2. **Start the Angular development server**:
+
+   Navigate to the `frontend` folder and start the Angular server:
+
+   ```bash
+   cd ..
+   ng serve
+   ```
+
+   The Angular app will run on `http://localhost:4200`.
+
+## License
+
+This project is licensed under the MIT License.

@@ -1,0 +1,14 @@
+<div class="chat-container p-4 rounded-lg">
+    <div class="messages mb-4">
+        @for (message of messages; track $index) {
+        <div class="message" [ngClass]="{'user-message': message.user, 'bot-message': !message.user}">
+            {{ message.text }}
+        </div>
+        }
+    </div>
+    <div class="input-container flex">
+        <input [(ngModel)]="inputText" (keyup.enter)="sendMessage()" placeholder="Type a message..."
+            class="flex-grow p-2 rounded-l-lg border border-r-0 border-gray-300">
+        <button (click)="sendMessage()" class="p-2 bg-blue-500 text-white rounded-r-lg">Send</button>
+    </div>
+</div>
