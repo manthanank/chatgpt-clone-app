@@ -14,7 +14,7 @@ This is the backend for the AI server application. It uses Node.js, Express, and
 1. Clone the repository:
 
     ```sh
-    git clone <repository-url>
+    git clone https://github.com/manthanank/chatgpt-clone-app.git
     ```
 
 2. Navigate to the project directory:
@@ -45,34 +45,6 @@ npm run dev
 ```
 
 The server will be running at [http://localhost:5000](http://localhost:5000).
-
-## API Endpoints
-
-### POST /chat
-
-This endpoint generates a response to a given prompt.
-
-#### Request
-
-```json
-{
-  "prompt": "Quote of the day",
-  "max_tokens": 100
-}
-```
-
-- `prompt`: The input prompt for the AI model.
-- `max_tokens`: The maximum number of tokens to generate in the response.
-
-#### Response
-
-```json
-{
-  "response": "Forrest Gump: \"Life is like a box of chocolates. You never know what you're gonna get.\""
-}
-```
-
-- `response`: The generated response from the AI model.
 
 ## License
 
