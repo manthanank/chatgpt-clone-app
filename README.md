@@ -51,56 +51,6 @@ Make sure you have the following installed:
    npm install
    ```
 
-4. **Configure Tailwind CSS**:
-
-   Tailwind CSS should already be configured. If not, follow these steps:
-
-   - Install Tailwind CSS and its dependencies:
-
-     ```bash
-     npm install tailwindcss postcss autoprefixer
-     ```
-
-   - Initialize Tailwind CSS:
-
-     ```bash
-     npx tailwindcss init
-     ```
-
-   - Update `tailwind.config.js`:
-
-     ```javascript
-     /** @type {import('tailwindcss').Config} */
-     module.exports = {
-       content: [
-         "./src/**/*.{html,ts}"
-       ],
-       theme: {
-         extend: {},
-       },
-       plugins: [],
-     }
-     ```
-
-   - Create `postcss.config.js`:
-
-     ```javascript
-     module.exports = {
-       plugins: [
-         require('tailwindcss'),
-         require('autoprefixer'),
-       ]
-     }
-     ```
-
-   - Update `src/styles.css`:
-
-     ```css
-     @tailwind base;
-     @tailwind components;
-     @tailwind utilities;
-     ```
-
 ## Running the Application
 
 1. **Start the backend server**:
